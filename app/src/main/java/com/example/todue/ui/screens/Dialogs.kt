@@ -20,6 +20,7 @@ import androidx.compose.material.ButtonDefaults
 import androidx.compose.material.Card
 import androidx.compose.material.Text
 import androidx.compose.material.TextField
+import androidx.compose.material.TextFieldDefaults
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material3.FloatingActionButton
@@ -34,6 +35,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -130,6 +132,15 @@ fun CreateToDoDialog(
                     onValueChange = {
                         onToDoEvent(ToDoEvent.SetTitle(it))
                     },
+                    colors = TextFieldDefaults.textFieldColors(
+                        focusedIndicatorColor = MaterialTheme.colorScheme.primary,
+                        disabledIndicatorColor = MaterialTheme.colorScheme.onSurface,
+                        unfocusedIndicatorColor = Color.Transparent,
+                        textColor = MaterialTheme.colorScheme.onBackground,
+                        focusedLabelColor = MaterialTheme.colorScheme.onSurface,
+                        placeholderColor =  MaterialTheme.colorScheme.onSurface,
+                        cursorColor =  MaterialTheme.colorScheme.primary
+                    ),
                     placeholder = {
                         Text(
                             text = "Title",
@@ -143,6 +154,15 @@ fun CreateToDoDialog(
                     onValueChange = {
                         onToDoEvent(ToDoEvent.SetDescription(it))
                     },
+                    colors = TextFieldDefaults.textFieldColors(
+                        focusedIndicatorColor = MaterialTheme.colorScheme.primary,
+                        disabledIndicatorColor = MaterialTheme.colorScheme.onSurface,
+                        unfocusedIndicatorColor = Color.Transparent,
+                        textColor = MaterialTheme.colorScheme.onBackground,
+                        focusedLabelColor = MaterialTheme.colorScheme.onSurface,
+                        placeholderColor =  MaterialTheme.colorScheme.onSurface,
+                        cursorColor =  MaterialTheme.colorScheme.primary
+                    ),
                     placeholder = {
                         Text(
                             text = "Description",
@@ -156,6 +176,15 @@ fun CreateToDoDialog(
                     onValueChange = {
                         onToDoEvent(ToDoEvent.SetTag(it))
                     },
+                    colors = TextFieldDefaults.textFieldColors(
+                        focusedIndicatorColor = MaterialTheme.colorScheme.primary,
+                        disabledIndicatorColor = MaterialTheme.colorScheme.onSurface,
+                        unfocusedIndicatorColor = Color.Transparent,
+                        textColor = MaterialTheme.colorScheme.onBackground,
+                        focusedLabelColor = MaterialTheme.colorScheme.onSurface,
+                        placeholderColor =  MaterialTheme.colorScheme.onSurface,
+                        cursorColor =  MaterialTheme.colorScheme.primary
+                    ),
                     placeholder = {
                         Text(
                             text = "Tag",
@@ -497,6 +526,15 @@ fun EditToDoDialog(
                     onValueChange = {
                         onToDoEvent(ToDoEvent.SetTitle(it))
                     },
+                    colors = TextFieldDefaults.textFieldColors(
+                        focusedIndicatorColor = MaterialTheme.colorScheme.primary,
+                        disabledIndicatorColor = MaterialTheme.colorScheme.onSurface,
+                        unfocusedIndicatorColor = Color.Transparent,
+                        textColor = MaterialTheme.colorScheme.onBackground,
+                        focusedLabelColor = MaterialTheme.colorScheme.onSurface,
+                        placeholderColor =  MaterialTheme.colorScheme.onSurface,
+                        cursorColor =  MaterialTheme.colorScheme.primary
+                    ),
                     placeholder = {
                         Text(
                             text = "New title",
@@ -510,6 +548,15 @@ fun EditToDoDialog(
                     onValueChange = {
                         onToDoEvent(ToDoEvent.SetDescription(it))
                     },
+                    colors = TextFieldDefaults.textFieldColors(
+                        focusedIndicatorColor = MaterialTheme.colorScheme.primary,
+                        disabledIndicatorColor = MaterialTheme.colorScheme.onSurface,
+                        unfocusedIndicatorColor = Color.Transparent,
+                        textColor = MaterialTheme.colorScheme.onBackground,
+                        focusedLabelColor = MaterialTheme.colorScheme.onSurface,
+                        placeholderColor =  MaterialTheme.colorScheme.onSurface,
+                        cursorColor =  MaterialTheme.colorScheme.primary
+                    ),
                     placeholder = {
                         Text(
                             text = "New description",
@@ -523,6 +570,15 @@ fun EditToDoDialog(
                     onValueChange = {
                         onToDoEvent(ToDoEvent.SetTag(it))
                     },
+                    colors = TextFieldDefaults.textFieldColors(
+                        focusedIndicatorColor = MaterialTheme.colorScheme.primary,
+                        disabledIndicatorColor = MaterialTheme.colorScheme.onSurface,
+                        unfocusedIndicatorColor = Color.Transparent,
+                        textColor = MaterialTheme.colorScheme.onBackground,
+                        focusedLabelColor = MaterialTheme.colorScheme.onSurface,
+                        placeholderColor =  MaterialTheme.colorScheme.onSurface,
+                        cursorColor =  MaterialTheme.colorScheme.primary
+                    ),
                     placeholder = {
                         Text(
                             text = "New tag",

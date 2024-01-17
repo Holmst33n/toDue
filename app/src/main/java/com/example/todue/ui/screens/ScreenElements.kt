@@ -663,7 +663,7 @@ fun TopBar(
                 textColor = MaterialTheme.colorScheme.onBackground,
                 focusedLabelColor = MaterialTheme.colorScheme.onSurface,
                 placeholderColor =  MaterialTheme.colorScheme.onSurface,
-                cursorColor =  MaterialTheme.colorScheme.primary,
+                cursorColor =  MaterialTheme.colorScheme.primary
             ),
             onValueChange = {
                 onToDoEvent(ToDoEvent.SetSearchInToDos(it))
