@@ -582,8 +582,8 @@ fun EditToDoDialog(
                     placeholder = {
                         Text(
                             text = "New tag",
-                            color = MaterialTheme.colorScheme.onBackground,
-                            )
+                            color = MaterialTheme.colorScheme.onBackground
+                        )
                     }
                 )
 
