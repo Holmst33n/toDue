@@ -389,10 +389,11 @@ fun CheckToDoDialog(
                     fontStyle = FontStyle.Italic,
                     fontSize = 15.sp,
                     color = MaterialTheme.colorScheme.primary,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
                     modifier = Modifier
                         .padding(top = 5.dp)
                         .fillMaxWidth()
-                        .padding(bottom = 5.dp)
                 )
             }
         },
@@ -400,8 +401,7 @@ fun CheckToDoDialog(
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(5.dp)
-                    .padding(start = 5.dp, end = 5.dp),
+                    .padding(start = 10.dp, end = 10.dp, bottom = 5.dp),
                 verticalAlignment = Alignment.Bottom,
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
