@@ -16,6 +16,8 @@ import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import java.time.LocalDate
 
+//ViewModel inspired by Philipp Lackner, YouTube: https://www.youtube.com/@PhilippLackner
+
 class CalendarViewModel(
     private val toDoRepository: ToDoRepository
 ): ViewModel() {

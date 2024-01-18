@@ -15,6 +15,8 @@ import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 
+//ViewModel inspired by Philipp Lackner, YouTube: https://www.youtube.com/@PhilippLackner
+
 class TagsViewModel(
     private val tagRepository: TagRepository
 ): ViewModel() {

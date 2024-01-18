@@ -19,7 +19,11 @@ interface ToDoDao {
     @Query("SELECT * FROM todo")
     fun observeAll(): Flow<List<ToDo>>
 
-    @Query("SELECT * FROM todo t WHERE (title LIKE '%' || :search || '%' OR description LIKE '%' || :search || '%' OR tag LIKE '%' || :search || '%') AND EXISTS (SELECT title FROM tag tag WHERE tag.sort = 1 AND tag.title = t.tag) AND t.finished = :finished ORDER BY t.dueDate, t.DueTime")
+    @Query("SELECT * FROM todo t WHERE (title LIKE '%' || :search || '%' " +
+            "OR description LIKE '%' || :search || '%' " +
+            "OR tag LIKE '%' || :search || '%') AND EXISTS " +
+            "(SELECT title FROM tag tag WHERE tag.sort = 1 AND tag.title = t.tag) " +
+            "AND t.finished = :finished ORDER BY t.dueDate, t.DueTime")
     fun getToDosOrderedByTags(search: String, finished: Boolean): Flow<List<ToDo>>
 
     @Query("SELECT * FROM todo WHERE finished = :finished AND (" +
@@ -38,8 +42,19 @@ interface ToDoDao {
     @Query("SELECT * FROM todo WHERE dueDate = :date AND finished = 0")
     fun getToDosByGivenDate(date: String): Flow<List<ToDo>>
 
-    @Query("UPDATE todo SET title = :newTitle, description = :newDescription, tag = :newTag, dueDate = :newDueDate, dueTime = :newDueTime WHERE id = :toDoId")
-    suspend fun editToDo(newTitle: String, newDescription: String, newTag: String, newDueDate: String, newDueTime: String, toDoId: Int)
+    @Query("UPDATE todo SET " +
+            "title = :newTitle," +
+            "description = :newDescription," +
+            "tag = :newTag," +
+            "dueDate = :newDueDate," +
+            "dueTime = :newDueTime " +
+            "WHERE id = :toDoId")
+    suspend fun editToDo(newTitle: String,
+                         newDescription: String,
+                         newTag: String,
+                         newDueDate: String,
+                         newDueTime: String,
+                         toDoId: Int)
 
     @Query("UPDATE todo SET tag = '' WHERE tag = :tag")
     suspend fun deleteTagFromToDos(tag: String)
