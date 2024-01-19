@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "toDue"
+rootProject.name = "25_toDue"
 include(":app")
  
