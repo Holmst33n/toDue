@@ -1,4 +1,4 @@
-package com.example.todue.ui.screens.calendar
+package com.example.todue.ui.stateholders
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

@@ -18,9 +18,9 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.todue.ui.theme.ToDoTheme
 import com.example.todue.di.DatabaseModules
-import com.example.todue.ui.screens.tags.TagsViewModel
-import com.example.todue.ui.screens.overview.ToDosViewModel
-import com.example.todue.ui.screens.calendar.CalendarViewModel
+import com.example.todue.ui.stateholders.TagsViewModel
+import com.example.todue.ui.stateholders.ToDosViewModel
+import com.example.todue.ui.stateholders.CalendarViewModel
 import com.example.todue.ui.screens.GeneralLayout
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import com.example.todue.dataLayer.source.local.TagRepository
