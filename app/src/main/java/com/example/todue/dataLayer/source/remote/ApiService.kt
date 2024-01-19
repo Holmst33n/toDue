@@ -6,6 +6,8 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
+// Fixed and adjusted with help from LLM
+
 class ApiService {
     object RetrofitInstance {
         private const val BASE_URL = "https://api.giphy.com/v1/"
